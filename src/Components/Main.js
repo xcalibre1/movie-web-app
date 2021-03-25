@@ -34,14 +34,14 @@ export default function Main() {
         <div className="special">
 
             <Navbar bg="dark" variant="dark" expand="sm">
-                <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+                <Navbar.Brand href="#home">RATED</Navbar.Brand>
                 <Nav className="mr-auto">
                     <Nav.Link href="#home">Home</Nav.Link>
                     <Nav.Link href="#features">Features</Nav.Link>
                     <Nav.Link href="#pricing">Pricing</Nav.Link>
                 </Nav>
                 <Form inline >
-                    <input type="text" name="query" placeholder="i.e jurrasic park" value={query} onChange={(e) => {
+                    <Form.Control className="mr-1" type="text" name="query" placeholder="i.e jurrasic park" value={query} onChange={(e) => {
                         setmname(e.target.value); setQuery(e.target.value)
                     }} />
                     <Button variant="outline-info" onClick={searchMovies}>Search</Button>
@@ -51,7 +51,7 @@ export default function Main() {
             <div className="row">
 
                 {movies.filter((movie,index) => movie.poster_path).map((movie,index) => (
-                    <div className="col-lg-4 col-md-6 col-sm-12 ">
+                    <div className="col-lg-3 col-md-6 col-sm-12 ">
                         <Card1 movies={movie} key={index}/>
 
                     </div>
